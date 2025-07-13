@@ -23,7 +23,9 @@ So far, this repository contains:
 
 https://www.jstor.org/stable/23566419 https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/12-1256.1
 
-2. Generalized SMR (gSMR) with known number of marked individuals. This includes a marking process to account for different spatial distributions of marked and unmarked individuals (Whittington et al. 2018).generalized SMR (gSMR) with known number of marked individuals. This includes a marking process to account for different spatial distributions of marked and unmarked individuals (Whittington et al. 2018). There is an Mb (marking only) single session version, too. Negative binomial observation model only.
+2. Generalized SMR (gSMR) with known number of marked individuals. This includes a marking process to account for different spatial distributions of marked and unmarked individuals (Whittington et al. 2018).generalized SMR (gSMR) with known number of marked individuals. This includes a marking process to account for different spatial distributions of marked and unmarked individuals (Whittington et al. 2018). Poisson and negative binomial observation models.
+
+3. Mb version of 2. Negative binomial observation model only.
 
 https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2664.12954
 
