@@ -10,6 +10,7 @@ negative binomial hurdle models are also good options, but require the full 3D c
 
 https://github.com/benaug/Spatial-Mark-Resight-Marginal
 
+
 Latent IDs of each sample are updated one at a time on each MCMC iteration in
 the same manner as they are in categorical SMR where each sample can have one or more categorical covariate, like sex or age class. 
 
@@ -17,6 +18,12 @@ https://github.com/benaug/Spatial-Mark-Resight-IDCov
 
 I have another approach working where we update all IDs at each trap at simultaneously, but it is slower than the one at a time approach, at least
 with fewer than 1000 samples spread over 81 traps.
+
+Care is needed for the dispersion parameter, phi, prior. It can be weakly identified, particularly without abundant counts, and when
+not all marked individual samples are identified to individual (theta.marked[1] < 1). Identifiability is improved with telemetry and/or 
+a marking process in generalized SMR. The model files are set up with moderately informative priors for moderate to strong overdispersion.
+This worked well in one simulation scenario and did not produce bias in another simulation scenario where I simulated Poisson (phi very large) data. So, it did
+not appear very influential, but it could be with very sparse data.
 
 So far, this repository contains:
 1. Known number of marked individuals (Chandler and Royle 2013, Sollmann et al. 2013), Poisson and negative binomial.
