@@ -116,10 +116,10 @@ init.SMR.Dcov.Generalized <- function(data,inits=NA,M=NA,obsmod="poisson"){
   z.init <- 1*(rowSums(y.true)>0)
   z.init[1:n.marked] <- 1
   
-  #update s.init given marking and sighting histories, skip marked guys
+  #update s.init given marking and sighting histories
   y.both <- cbind(y.mark,y.true)
   X.both <- rbind(X.mark,X.sight)
-  idx <- which(rowSums(y.both[(n.marked+1):M,])>0) + n.marked
+  idx <- which(rowSums(y.both)>0)
   for(i in idx){
     trps <- matrix(X.both[y.both[i,]>0,1:2],ncol=2,byrow=FALSE)
     if(nrow(trps)>1){

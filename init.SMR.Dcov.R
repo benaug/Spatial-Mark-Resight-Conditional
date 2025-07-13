@@ -107,9 +107,9 @@ init.SMR.Dcov <- function(data,inits=NA,M=NA,obsmod="poisson"){
   z.init <- 1*(rowSums(y.true)>0)
   z.init[1:n.marked] <- 1
   
-  #update s for individuals assigned samples, skip marked guys
+  #update s for individuals assigned samples
   y.true2D <- y.true
-  idx <- which(rowSums(y.true2D[(n.marked+1):M,])>0) + n.marked
+  idx <- which(rowSums(y.true2D)>0)
   for(i in idx){
     trps <- matrix(X[y.true2D[i,]>0,1:2],ncol=2,byrow=FALSE)
     if(nrow(trps)>1){
