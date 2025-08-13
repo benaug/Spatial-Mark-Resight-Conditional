@@ -36,3 +36,4 @@ https://www.jstor.org/stable/23566419 https://esajournals.onlinelibrary.wiley.co
 
 https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2664.12954
 
+These models use N-prior data augmentation: https://github.com/benaug/SCR-N-Prior-Data-Augmentation
